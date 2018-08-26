@@ -42,7 +42,7 @@ class List extends Component {
                             type='text'
                             placeholder='Search Restaurant'
                             onChange={(event)=>{this.updateQuery(event.target.value);
-                                     this.props.onUpdateQuery(event.target.value)}} //--test part to filter markers
+                                     this.props.onUpdateQuery(event.target.value)}} 
                             value={this.state.query}
                         />
                     <h5 tabIndex='0'>Click on Restaurant Name</h5>
