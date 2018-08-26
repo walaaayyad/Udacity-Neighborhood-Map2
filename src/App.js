@@ -157,27 +157,29 @@ focusMarker= (listItem)=>{
   }
 //  filter markers when user enter new value
 
-  updateQuery=(query)=>{
-    const match = new RegExp(escapeRegExp(this.state.query), 'i');
-             let filteredMarkers;
-          this.setState({ query: query }, () => {
-                  if(this.state.query !== '') {
-           filteredMarkers = this.state.markers.filter((marker)=> match.test(marker.title));
-           filteredMarkers.map((marker)=> marker.setVisible(true));
-          console.log(this.state.markers);
-          console.log(filteredMarkers);
+ updateQuery=(query)=>{
+           let filteredMarkers;
+           this.setState({ query: query }, () => {
+                if(this.state.query !== '') {
+                   const match = new RegExp(escapeRegExp(this.state.query), 'i');
 
-                      
-          filteredMarkers = this.state.markers.filter((marker)=> ! (match.test(marker.title)));
-          filteredMarkers.map((marker)=> marker.setVisible(false));
-          console.log(this.state.markers);
-          console.log(filteredMarkers);
+                       filteredMarkers = this.state.markers.filter((m)=> match.test(m.title))
+                       .map((marker)=> marker.setVisible(true));
+                          console.log(this.state.markers);
+                          console.log(filteredMarkers);
+
+                                  
+                       filteredMarkers = this.state.markers.filter((m)=> ! (match.test(m.title)))
+                       .map((marker)=> marker.setVisible(false));
+                          console.log(this.state.markers);
+                          console.log(filteredMarkers);
                   }else{
-                    this.state.markers.map((marker)=> marker.setVisible(true));
-                  }
-              })
 
-          }
+                       this.state.markers.map((marker)=> marker.setVisible(true));
+                }
+            })
+
+         }
         
 
  
@@ -215,5 +217,5 @@ render(){
 }
 
 export default scriptLoader(
-["https://maps.googleapis.com/maps/api/js?key=AIzaSyDrb41GQ4AvQu6fzITuhh2BraPokBzmNhI&v=3&callback=initMap"]
+["https://maps.googleapis.com/maps/api/js?key=AIzaSyDrb41GQ4AvQu6fzITuhh2BraPokBzmNhI&v=3"]
 )(App)
