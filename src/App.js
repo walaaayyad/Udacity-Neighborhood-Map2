@@ -5,6 +5,7 @@ import escapeRegExp from 'escape-string-regexp'
 import './App.css';
 import relode from './images/relode.png';
 
+// Get Locations From FourSquar API
 var foursquare = require('react-foursquare')({
   clientID: 'PEEZ12FJCFW01QSIIAB1LYP24CDJ0ZCJUDUVQKRFYRQKEZLG',
   clientSecret: 'E3M5OUVJGXF45JGXLGLQCOHBGLYOWT2QWI2ADV2OZNFIMTWN'  
@@ -22,7 +23,7 @@ class App extends Component {
     super(props);
 
   }
-// Get Locations From API foursquar
+
 
 state={
 mapError: false,
