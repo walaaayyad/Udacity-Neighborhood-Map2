@@ -18,6 +18,6 @@
   3. Use command line **npm start** or **yarn start** to run the application in new browser
 
 ### How to run the project in Production Mode
-The service worker works only in production mode
-To run App in production mode locally run:
-   **npm run build** in command line 
+- The service worker works only in production mode
+- To run App in production mode locally run:
+  -  **npm run build** in command line 
