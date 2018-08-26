@@ -3,6 +3,7 @@ import scriptLoader from 'react-async-script-loader';
 import List from './List.js';
 import escapeRegExp from 'escape-string-regexp'
 import './App.css';
+import relode from './images/relode.png';
 
 var foursquare = require('react-foursquare')({
   clientID: 'PEEZ12FJCFW01QSIIAB1LYP24CDJ0ZCJUDUVQKRFYRQKEZLG',
@@ -200,13 +201,14 @@ render(){
            
             />
           <div id="map" role='application'>{
-           this.state.mapError?
-            <div id='map-error' role='alert'>
-            Google Map did not load.. (ERROR)check your connection
-            </div>
-            :<div className='Map Loading'>
-            Google Map is Loading...
-            </div>
+              this.state.mapError?
+                <div id='map-error' role='alert'>
+                    Google Map did not load.. (ERROR)check your connection
+                </div>
+                      :<div className="loading-map">
+                          <h4 className="loading-message">Map is loading...</h4>
+                          <img src={relode} className="relode" alt="loading indicator" />
+                      </div>
           }</div>
         </div>
         <footer></footer>

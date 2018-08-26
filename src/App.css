@@ -61,6 +61,14 @@ h2 {
   font-weight: 2em;
   color: brown;
 }
+.loading-map {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+}
+
 @media only screen and (max-width: 640px) {
 
   #map {
