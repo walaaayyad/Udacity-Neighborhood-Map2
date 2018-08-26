@@ -105,7 +105,7 @@ componentWillReceiveProps({isScriptLoaded,isScriptLoadSucceed}){
        
         //make marker bounce
         marker.setAnimation(window.google.maps.Animation.BOUNCE);
-    setTimeout(function(){ marker.setAnimation(null); }, 750);
+               setTimeout(function(){ marker.setAnimation(null); }, 750);
        
         infowindow.addListener('closeclick',function(){
           infowindow.setMarker = null;
@@ -138,7 +138,7 @@ componentWillReceiveProps({isScriptLoaded,isScriptLoadSucceed}){
           }
           
     }else{
-      alert(" Map not loaded.. Check your connection ") // handel error when map doesn't load
+      alert(" Map is not loading.. Check your connection ") // handel error when map doesn't load
       }
    }
 
@@ -204,19 +204,19 @@ render(){
           <div id="map" role='application'>{
               this.state.mapError?
                 <div id='map-error' role='alert'>
-                    Google Map did not load.. (ERROR)check your connection
-                </div>
+                  Google Map did not load.. (ERROR)check your connection
+                    </div>
                       :<div className="loading-map">
-                          <h4 className="loading-message">Map is loading...</h4>
+                        <h4 className="loading-message">Map is loading...</h4>
                           <img src={relode} className="relode" alt="loading indicator" />
-                      </div>
+                            </div>
           }</div>
         </div>
         <footer></footer>
 
       </div>
     )
-}
+  }
 }
 
 export default scriptLoader(
