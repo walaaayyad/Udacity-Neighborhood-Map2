@@ -102,7 +102,7 @@ componentWillReceiveProps({isScriptLoaded,isScriptLoadSucceed}){
         infowindow.marker = marker;
         infowindow.setContent('<div>' + marker.title + '</div>');
         infowindow.open(map, marker);
-        setTimeout(function(){infowindow.setMarker = null; }, 750);
+       
         //make marker bounce
         marker.setAnimation(window.google.maps.Animation.BOUNCE);
     setTimeout(function(){ marker.setAnimation(null); }, 750);
