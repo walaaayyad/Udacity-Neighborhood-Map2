@@ -197,10 +197,10 @@ render(){
             onUpdateQuery={this.updateQuery}
            
             />
-          <div id="map" role='application'>{
+          <div id="map">{
            this.state.mapError?
             <div id='map-error' role='alert'>
-            Google Map didn't load.. (ERROR)check your connection
+            Google Map did not load.. (ERROR)check your connection
             </div>
             :<div className='Map Loading'>
             Google Map is Loading...
