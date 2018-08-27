@@ -94,9 +94,12 @@ componentWillReceiveProps({isScriptLoaded,isScriptLoadSucceed}){
 
          bounds.extend(this.state.markers[i].position);
       }
-      map.fitBounds(bounds);
+       map.fitBounds(bounds);
    }
-  )};
+  ).catch(function() {
+    alert("Error: Fetch address data failed for this location try again later");
+})
+};
   
     function populateInfoWindow(marker, infowindow) {
 
