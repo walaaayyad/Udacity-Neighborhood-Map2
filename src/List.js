@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import escapeRegExp from 'escape-string-regexp'
-import sortBy from 'sort-by'
+
 
   
 class List extends Component {
@@ -28,7 +28,7 @@ class List extends Component {
            }else{
             showingRestaurant = this.props.locations
            }
-            showingRestaurant.sort(sortBy('name'))
+           
 
     
                 return(
