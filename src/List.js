@@ -28,7 +28,7 @@ class List extends Component {
            }else{
             showingRestaurant = this.props.locations
            }
-           
+          
 
     
                 return(

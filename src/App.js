@@ -55,7 +55,9 @@ componentWillReceiveProps({isScriptLoaded,isScriptLoadSucceed}){
          
           foursquare.venues.getVenues(params)
           .then(res=> {
-            this.setState({ locations: res.response.venues });
+            this.setState({ locations: res.response.venues })
+            ;
+          
           
         for(let i=0; i<this.state.locations.length; i++) {
           
